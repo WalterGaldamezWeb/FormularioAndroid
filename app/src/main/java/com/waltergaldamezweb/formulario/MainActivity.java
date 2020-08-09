@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextInputEditText edtFechaN;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void showDatePickerDialog() {
         DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -45,10 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 edtFechaN.setText(selectedDate);
             }
         });
-
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
-
 
 
 }
