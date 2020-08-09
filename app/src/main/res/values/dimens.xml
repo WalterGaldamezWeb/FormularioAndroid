@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="paddingLinear">10dp</dimen>
+    <dimen name="textSizeTitulo">20dp</dimen>
+    <dimen name="margensuperiorTitulo">15dp</dimen>
+    <dimen name="margensuperiorNombre">25dp</dimen>
+    <dimen name="margenSuperiorBtn">120dp</dimen>
+    <dimen name="margenIzquierdo">30dp</dimen>
 </resources>

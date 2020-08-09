@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalleDatos">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".DetalleDatos"
+    android:orientation="vertical"
+    android:padding="@dimen/paddingLinear">
+    <TextView
+        android:id="@+id/tvConfirDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvConfirDatos"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSizeTitulo"
+        android:layout_marginTop="@dimen/margensuperiorTitulo">
+    </TextView>
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvNombre"
+        android:layout_marginTop="@dimen/margensuperiorNombre"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/margenIzquierdo">
+    </TextView>
+    <TextView
+        android:id="@+id/tvFechaN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fechaN"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/margenIzquierdo">
+    </TextView>
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTel"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/margenIzquierdo">
+    </TextView>
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvCorreo"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/margenIzquierdo">
+    </TextView>
+    <TextView
+        android:id="@+id/tvDescripContac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvDescripcionContac"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/margenIzquierdo">
+    </TextView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnEditar"
+        android:layout_marginTop="@dimen/margenSuperiorBtn"
+        android:layout_gravity="center">
+    </Button>
+</LinearLayout>

@@ -6,4 +6,11 @@
     <string name="correo">Email</string>
     <string name="descripcionContac">Descripción Contacto</string>
     <string name="btnTexto">Siguiente</string>
+    <string name="btnEditar">Editar Datos</string>
+    <string name="tvConfirDatos">Confirmar Datos</string>
+    <string name="tvNombre">Nombre Completo : </string>
+    <string name="tvFechaN">Fecha de Nacimiento : </string>
+    <string name="tvTel">Telefono : </string>
+    <string name="tvCorreo">Email</string>
+    <string name="tvDescripcionContac">Descripción Contacto :</string>
 </resources>
