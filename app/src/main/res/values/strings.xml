@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Formulario</string>
+    <string name="nombre">Nombre Completo</string>
+    <string name="fechaN">Fecha de Nacimiento</string>
+    <string name="tel">Telefono</string>
+    <string name="correo">Email</string>
+    <string name="descripcionContac">Descripción Contacto</string>
+    <string name="btnTexto">Siguiente</string>
 </resources>
