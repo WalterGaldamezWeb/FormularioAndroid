@@ -7,11 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-
 import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int SECOND_ACTIVITY_REQUEST_CODE = 0;
+    protected String nombre;
+    protected String fecha;
+    protected String telefono;
+    protected String email;
+    protected String descripcion;
     TextInputEditText edtNombre;
     TextInputEditText edtFechaN;
     TextInputEditText edtTelefono;
@@ -46,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nombre = edtNombre.getText().toString();
-                String fecha = edtFechaN.getText().toString();
-                String telefono = edtTelefono.getText().toString();
-                String email = edtEmail.getText().toString();
-                String descripcion = edtDescrContacto.getText().toString();
+                nombre = edtNombre.getText().toString();
+                fecha = edtFechaN.getText().toString();
+                telefono = edtTelefono.getText().toString();
+                email = edtEmail.getText().toString();
+                descripcion = edtDescrContacto.getText().toString();
 
                 datos = new ModeloDatos(nombre,fecha,telefono,email,descripcion);
 
@@ -60,10 +65,33 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("Telefono",datos.getTelefono());
                 intent.putExtra("Email",datos.getCorreo());
                 intent.putExtra("DescripcionContacto",datos.getDescripcionContacto());
-                startActivity(intent);
+                startActivityForResult(intent, SECOND_ACTIVITY_REQUEST_CODE);
             }
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == SECOND_ACTIVITY_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+
+                nombre = data.getStringExtra("NombreEditar");
+                fecha = data.getStringExtra("FechaEditar");
+                telefono = data.getStringExtra("TelefonoEditar");
+                email = data.getStringExtra("EmailEditar");
+                descripcion = data.getStringExtra("DescripcionContactoEditar");
+
+                edtNombre.setText(nombre);
+                edtFechaN.setText(fecha);
+                edtTelefono.setText(telefono);
+                edtEmail.setText(email);
+                edtDescrContacto.setText(descripcion);
+            }
+        }
+    }
+
     private void showDatePickerDialog() {
         DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
             @Override
