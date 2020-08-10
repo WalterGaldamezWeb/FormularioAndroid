@@ -8,83 +8,68 @@
     android:orientation="vertical"
     android:padding="@dimen/paddingLinear">
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nombre">
-
         </com.google.android.material.textfield.TextInputEditText>
-
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtFechaN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/fechaN"
             android:focusable="false">
-
         </com.google.android.material.textfield.TextInputEditText>
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtTelefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/tel">
-
         </com.google.android.material.textfield.TextInputEditText>
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/correo">
-
         </com.google.android.material.textfield.TextInputEditText>
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtDescrContacto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/descripcionContac">
-
         </com.google.android.material.textfield.TextInputEditText>
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="vertical">
+
         <Button
             android:id="@+id/btnSiguiente"
             android:layout_width="match_parent"
@@ -93,13 +78,5 @@
         </Button>
 
     </LinearLayout>
-
-
-
-
-
-
-
-
 
 </LinearLayout>
