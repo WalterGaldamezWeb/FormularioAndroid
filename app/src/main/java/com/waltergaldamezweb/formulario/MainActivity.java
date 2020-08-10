@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText edtEmail;
     TextInputEditText edtDescrContacto;
     Button btnSiguiente;
-
-
     ModeloDatos datos;
 
     @Override
@@ -27,14 +25,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edtNombre = (TextInputEditText) findViewById(R.id.edtNombre);
-        edtTelefono = (TextInputEditText) findViewById(R.id.edtTelefono);
-        edtEmail = (TextInputEditText) findViewById(R.id.edtEmail);
-        edtDescrContacto = (TextInputEditText) findViewById(R.id.edtDescrContacto);
+        edtNombre =  findViewById(R.id.edtNombre);
+        edtTelefono = findViewById(R.id.edtTelefono);
+        edtEmail = findViewById(R.id.edtEmail);
+        edtDescrContacto = findViewById(R.id.edtDescrContacto);
+        btnSiguiente = findViewById(R.id.btnSiguiente);
+        edtFechaN =  findViewById(R.id.edtFechaN);
 
-
-
-        edtFechaN = (TextInputEditText) findViewById(R.id.edtFechaN);
         edtFechaN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,12 +43,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        datos = new ModeloDatos(edtNombre.toString(),edtFechaN.toString(),edtTelefono.toString(),edtEmail.toString(),edtDescrContacto.toString());
-
-        btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String nombre = edtNombre.getText().toString();
+                String fecha = edtFechaN.getText().toString();
+                String telefono = edtTelefono.getText().toString();
+                String email = edtEmail.getText().toString();
+                String descripcion = edtDescrContacto.getText().toString();
+
+                datos = new ModeloDatos(nombre,fecha,telefono,email,descripcion);
+
                 Intent intent = new Intent(MainActivity.this, DetalleDatos.class);
                 intent.putExtra("Nombre",datos.getNombre());
                 intent.putExtra("Fecha",datos.getFechaNacimiento());
@@ -61,9 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
     }
     private void showDatePickerDialog() {
         DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
@@ -76,6 +75,4 @@ public class MainActivity extends AppCompatActivity {
         });
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
-
-
 }
